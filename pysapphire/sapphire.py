@@ -32,7 +32,7 @@ def decrypt(key, data):
 
 class Sapphire:
     def __init__(self, key=None):
-        """Construct a Sapphire Stream Cipher from a key, possibly None or ""
+        """Construct a Sapphire Stream Cipher from a key, possibly None or b''
 
         Args:
             key (bytearray): key to use for cipher
@@ -42,6 +42,9 @@ class Sapphire:
             self.__initialize(key)
         else:
             self.hashInit()
+    
+    def __del__(self):
+        self.burn()
 
     def encrypt(self, b):
         """Encrypt a single byte, presumably the next.
@@ -98,7 +101,10 @@ class Sapphire:
         return self.__last_plain
 
     def burn(self):
-        # Destroy key and state information in RAM
+        """Destroy key and state information in RAM.
+
+        This function is automatically called by the destructor.
+        """
         for i in range(len(self.__cards)):
             self.__cards[i] = 0
         self.__rotor = 0

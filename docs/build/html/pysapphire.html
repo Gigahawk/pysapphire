@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>pysapphire package &#8212; pysapphire  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="pysapphire-package">
+<h1>pysapphire package<a class="headerlink" href="#pysapphire-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pysapphire.sapphire">
+<span id="pysapphire-sapphire-module"></span><h2>pysapphire.sapphire module<a class="headerlink" href="#module-pysapphire.sapphire" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pysapphire.sapphire.Sapphire">
+<em class="property">class </em><code class="sig-prename descclassname">pysapphire.sapphire.</code><code class="sig-name descname">Sapphire</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysapphire.sapphire.Sapphire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="pysapphire.sapphire.Sapphire.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysapphire.sapphire.Sapphire.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a Sapphire Stream Cipher from a key, possibly None or b’’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> (<em>bytearray</em>) – key to use for cipher</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pysapphire.sapphire.Sapphire.burn">
+<code class="sig-name descname">burn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pysapphire.sapphire.Sapphire.burn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy key and state information in RAM.</p>
+<p>This function is automatically called by the destructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pysapphire.sapphire.Sapphire.decrypt">
+<code class="sig-name descname">decrypt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysapphire.sapphire.Sapphire.decrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decrypt a single byte, presumably the next.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>b</strong> (<em>int</em>) – byte to decrypt</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>decrypted byte</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pysapphire.sapphire.Sapphire.encrypt">
+<code class="sig-name descname">encrypt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysapphire.sapphire.Sapphire.encrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encrypt a single byte, presumably the next.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>b</strong> (<em>int</em>) – byte to encrypt</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>encrypted byte</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pysapphire.sapphire.Sapphire.hash_final">
+<code class="sig-name descname">hash_final</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">length</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysapphire.sapphire.Sapphire.hash_final" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="pysapphire.sapphire.decrypt">
+<code class="sig-prename descclassname">pysapphire.sapphire.</code><code class="sig-name descname">decrypt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysapphire.sapphire.decrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decrypt data using a Saphire II stream cipeher</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>bytearray</em>) – key to use for decryption</p></li>
+<li><p><strong>data</strong> (<em>bytearray</em>) – data to decrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>decrypted data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bytearray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pysapphire.sapphire.encrypt">
+<code class="sig-prename descclassname">pysapphire.sapphire.</code><code class="sig-name descname">encrypt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysapphire.sapphire.encrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encrypt data using a Saphire II stream cipeher</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>bytearray</em>) – key to use for encryption</p></li>
+<li><p><strong>data</strong> (<em>bytearray</em>) – data to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>encrypted data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bytearray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pysapphire">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pysapphire" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pysapphire</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Jasper Chan.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/pysapphire.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
